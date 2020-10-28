@@ -215,7 +215,7 @@ class GenerationUI extends Component {
   render() {
     return (
       <div className="generation">
-        <div className="copy">Start with {this.state.value} cells prefilled</div>
+        <div className="copy">Bắt đầu với {this.state.value} ô điền trước </div>
         <InputRange
           maxValue={81}
           minValue={17}
@@ -689,20 +689,20 @@ export default class Index extends Component {
     return (
       <div className="actions">
         <div className="action" onClick={history.size ? this.undo : null}>
-          <ReloadIcon />Undo
+          <ReloadIcon />Hoàn tác
         </div>
         <div className="action redo" onClick={history.size ? this.redo : null}>
-          <ReloadIcon />Redo
+          <ReloadIcon />Khôi phục
         </div>
         <div className="action" onClick={!prefilled ? this.eraseSelected : null}>
-          <RemoveIcon />Erase
+          <RemoveIcon />Xoá
         </div>
         <div
           className="action"
           onClick={!prefilled ?
           this.fillSelectedWithSolution : null}
         >
-          <LoupeIcon />Hint
+          <LoupeIcon />Gợi ý
         </div>
         <style jsx>{ActionsStyle}</style>
       </div>
@@ -758,9 +758,9 @@ export default class Index extends Component {
       <div className="header">
         <div className="new-game" onClick={() => this.setState({ board: false })}>
           <ReturnIcon />
-          <div>New Game</div>
+          <div>Trò chơi mới</div>
         </div>
-        <Tip />
+        {/* <Tip /> */}
         { /* language=CSS */ }
         <style jsx>{`
             .header {
@@ -808,9 +808,9 @@ export default class Index extends Component {
         {board && this.renderHeader()}
         {board && this.renderPuzzle()}
         {board && this.renderControls()}
-        <div className="rooter">
+        {/* <div className="rooter">
           Made with <span>❤️</span>️ By <a href="https://www.sitianliu.com/">Sitian Liu</a> | <a href="https://medium.com/@sitianliu_57680/building-a-sudoku-game-in-react-ca663915712">Blog Post</a>
-        </div>
+        </div> */}
         { /* language=CSS */ }
         <style jsx>{`
             :global(body), .body {
