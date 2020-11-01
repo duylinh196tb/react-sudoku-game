@@ -354,7 +354,7 @@ const Cell = (props) => {
         {`
           .cell {
             background: ${!backgroundColor
-              ? "linear-gradient(180deg, rgba(255,255,255,1) 0%,rgba(255,255,255,1) 51%, rgba(237,187,148,1) 100%)"
+              ? "linear-gradient(180deg, rgba(255,255,255,1) 0%,rgba(255,255,255,1) 25%, rgba(237,187,148,1) 100%)"
               : "initial"};
             background-color: ${backgroundColor || "initial"};
             color: ${fontColor || "initial"};
