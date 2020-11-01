@@ -353,6 +353,9 @@ const Cell = (props) => {
       <style jsx>
         {`
           .cell {
+            background: ${!backgroundColor
+              ? "linear-gradient(180deg, rgba(255,255,255,1) 0%,rgba(255,255,255,1) 51%, rgba(237,187,148,1) 100%)"
+              : "initial"};
             background-color: ${backgroundColor || "initial"};
             color: ${fontColor || "initial"};
           }
@@ -790,7 +793,7 @@ export default class Index extends Component {
           .get("puzzle")
           .map((row, i) => (
             // eslint-disable-next-line react/no-array-index-key
-            <div key={i} className="row">
+            <div key={i} className="row" style={{ backgroundColor: "red" }}>
               {row.map((cell, j) => this.renderCell(cell, i, j)).toArray()}
             </div>
           ))
