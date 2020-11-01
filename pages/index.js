@@ -793,7 +793,7 @@ export default class Index extends Component {
           .get("puzzle")
           .map((row, i) => (
             // eslint-disable-next-line react/no-array-index-key
-            <div key={i} className="row" style={{ backgroundColor: "red" }}>
+            <div key={i} className="row" >
               {row.map((cell, j) => this.renderCell(cell, i, j)).toArray()}
             </div>
           ))
